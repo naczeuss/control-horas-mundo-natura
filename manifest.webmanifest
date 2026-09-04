@@ -1,0 +1,13 @@
+{
+  "name": "Control Horas Mundo Natura",
+  "short_name": "Control Horas",
+  "description": "Control mensual de horas de trabajo de Mundo Natura.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#faf9fc",
+  "theme_color": "#5b32b5",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
