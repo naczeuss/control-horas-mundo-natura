@@ -34,6 +34,7 @@
         <article class="summary-card"><span id="differenceLabel">Horas restantes</span><strong id="differenceValue">—</strong></article>
         <article class="summary-card"><span>Horas extra</span><strong id="extraValue">0 h</strong></article>
         <article class="summary-card"><span>Cumplimiento</span><strong id="percentageValue">—</strong></article>
+        <article class="summary-card"><span>Vacaciones</span><strong id="vacationValue">Días: 0 · Horas: 0 h</strong></article>
         <article class="summary-card wide"><span>Importe horas extra</span><strong id="amountValue">0,00 €</strong><small id="statusText">Introduce el objetivo mensual para ver el progreso.</small></article>
       </section>
 
@@ -50,6 +51,7 @@
       <form id="dayForm" method="dialog">
         <div class="dialog-heading"><div><p class="eyebrow">Registrar jornada</p><h2 id="dialogDate">Fecha</h2></div><button class="close-button" type="button" id="closeDialog" aria-label="Cerrar">×</button></div>
         <label class="day-type">Tipo de día<select id="dayType"><option value="work">Jornada</option><option value="vacation">Vacaciones</option></select></label>
+        <label class="vacation-hours" id="vacationHoursField" hidden>Horas de vacaciones<input id="vacationHours" type="number" min="0" step="0.25" inputmode="decimal" value="4" /><span>h</span></label>
         <fieldset><legend>Mañana</legend><div class="time-fields"><label>Entrada<input id="morningStart" type="time" /></label><label>Salida<input id="morningEnd" type="time" /></label></div><output id="morningTotal"></output></fieldset>
         <fieldset><legend>Tarde</legend><div class="time-fields"><label>Entrada<input id="afternoonStart" type="time" /></label><label>Salida<input id="afternoonEnd" type="time" /></label></div><output id="afternoonTotal"></output></fieldset>
         <div class="day-total">Total del día <strong id="dayTotal">0 h</strong></div>

@@ -5,3 +5,21 @@
   font-weight: 700;
   color: var(--muted);
 }
+
+.vacation-hours {
+  display: grid;
+  gap: 6px;
+  margin-top: 13px;
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--muted);
+  position: relative;
+}
+
+.vacation-hours span {
+  position: absolute;
+  right: 11px;
+  bottom: 10px;
+  font-size: .9rem;
+  color: var(--muted);
+}
