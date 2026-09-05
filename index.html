@@ -31,10 +31,11 @@
       <section class="summary-grid" aria-label="Resumen mensual">
         <article class="summary-card accent"><span>Horas objetivo</span><strong id="goalValue">—</strong></article>
         <article class="summary-card"><span>Horas realizadas</span><strong id="workedValue">0 h</strong></article>
+        <article class="summary-card"><span>Horas cubiertas</span><strong id="coveredValue">0 h</strong><small id="coveredDetail">Vacaciones: 0 h · Festivos: 0 h</small></article>
         <article class="summary-card"><span id="differenceLabel">Horas restantes</span><strong id="differenceValue">—</strong></article>
         <article class="summary-card"><span>Horas extra</span><strong id="extraValue">0 h</strong></article>
         <article class="summary-card"><span>Cumplimiento</span><strong id="percentageValue">—</strong></article>
-        <article class="summary-card"><span>Vacaciones</span><strong id="vacationValue">Días: 0 · Horas: 0 h</strong></article>
+        <article class="summary-card"><span>Vacaciones</span><strong id="vacationValue">Días naturales: 0</strong><small id="vacationDetail">Horas cubiertas por vacaciones: 0 h</small></article>
         <article class="summary-card wide"><span>Importe horas extra</span><strong id="amountValue">0,00 €</strong><small id="statusText">Introduce el objetivo mensual para ver el progreso.</small></article>
       </section>
 
@@ -50,8 +51,8 @@
     <dialog id="dayDialog" class="day-dialog">
       <form id="dayForm" method="dialog">
         <div class="dialog-heading"><div><p class="eyebrow">Registrar jornada</p><h2 id="dialogDate">Fecha</h2></div><button class="close-button" type="button" id="closeDialog" aria-label="Cerrar">×</button></div>
-        <label class="day-type">Tipo de día<select id="dayType"><option value="work">Jornada</option><option value="vacation">Vacaciones</option></select></label>
-        <label class="vacation-hours" id="vacationHoursField" hidden>Horas de vacaciones<input id="vacationHours" type="number" min="0" step="0.25" inputmode="decimal" value="4" /><span>h</span></label>
+        <label class="day-type">Tipo de día<select id="dayType"><option value="work">Jornada</option><option value="vacation">Vacaciones</option><option value="holiday">Festivo</option></select></label>
+        <label class="vacation-hours" id="vacationHoursField" hidden>Horas jornada diaria<input id="vacationHours" type="number" min="0" step="0.25" inputmode="decimal" value="4" /><span>h</span></label>
         <fieldset><legend>Mañana</legend><div class="time-fields"><label>Entrada<input id="morningStart" type="time" /></label><label>Salida<input id="morningEnd" type="time" /></label></div><output id="morningTotal"></output></fieldset>
         <fieldset><legend>Tarde</legend><div class="time-fields"><label>Entrada<input id="afternoonStart" type="time" /></label><label>Salida<input id="afternoonEnd" type="time" /></label></div><output id="afternoonTotal"></output></fieldset>
         <div class="day-total">Total del día <strong id="dayTotal">0 h</strong></div>
