@@ -1,9 +1,8 @@
-const CACHE = 'control-horas-mundo-natura-v4-1';
+const CACHE = 'control-horas-mundo-natura-v4-1-1';
 const ASSETS = ['./', './index.html', './styles.css', './vacation.css', './app.js', './manifest.webmanifest', './assets/mundo-natura-logo.png', './icons/icon-192.png', './icons/icon-512.png'];
 const NETWORK_FIRST = ['document', 'script', 'style', 'manifest'];
 
 self.addEventListener('install', event => {
-  self.skipWaiting();
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)));
 });
 
