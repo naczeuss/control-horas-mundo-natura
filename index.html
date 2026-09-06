@@ -45,8 +45,24 @@
         <div id="calendar" class="calendar" aria-label="Calendario mensual"></div>
       </section>
 
+      <section class="card data-section" aria-label="Datos y seguridad">
+        <div class="section-heading"><div><p class="eyebrow">Datos y seguridad</p><h2>Copia de seguridad</h2></div><span id="versionText" class="app-version">v4.1</span></div>
+        <div class="data-actions"><button id="backupButton" class="button secondary" type="button">Crear copia de seguridad</button><button id="restoreButton" class="button secondary" type="button">Restaurar copia</button><input id="restoreFile" type="file" accept="application/json,.json" hidden /></div>
+        <p id="backupStatus" class="data-status" role="status" aria-live="polite"></p>
+      </section>
+
       <section class="card weekly-section"><div class="section-heading"><div><p class="eyebrow">Seguimiento</p><h2>Resumen semanal</h2></div></div><div id="weeklySummary" class="weekly-list"></div></section>
     </main>
+
+    <div id="updateNotice" class="update-notice" hidden><span>Nueva versión disponible</span><button id="updateButton" class="button" type="button">Actualizar ahora</button></div>
+
+    <dialog id="restoreDialog" class="day-dialog">
+      <form method="dialog">
+        <div class="dialog-heading"><div><p class="eyebrow">Restaurar copia</p><h2>Confirmar restauración</h2></div><button class="close-button" type="button" id="closeRestoreDialog" aria-label="Cerrar">×</button></div>
+        <p>Esta acción sustituirá los datos actuales por los datos de la copia seleccionada. ¿Deseas continuar?</p>
+        <div class="dialog-actions"><span></span><span></span><button class="button secondary" id="cancelRestore" type="button">Cancelar</button><button class="button" id="confirmRestore" type="button">Restaurar</button></div>
+      </form>
+    </dialog>
 
     <dialog id="dayDialog" class="day-dialog">
       <form id="dayForm" method="dialog">
