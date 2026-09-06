@@ -47,27 +47,6 @@
   font-weight: 700;
 }
 
-.update-notice {
-  position: fixed;
-  left: max(16px, env(safe-area-inset-left));
-  right: max(16px, env(safe-area-inset-right));
-  bottom: calc(16px + env(safe-area-inset-bottom));
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  max-width: 520px;
-  margin: auto;
-  padding: 12px;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: #fff;
-  box-shadow: 0 12px 34px rgba(47,28,80,.16);
-  color: var(--ink);
-  font-weight: 750;
-}
-
 @media(max-width:680px) {
   .data-actions {
     display: grid;

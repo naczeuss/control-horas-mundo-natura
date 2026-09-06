@@ -1,4 +1,4 @@
-const CACHE = 'control-horas-mundo-natura-v4-1-1';
+const CACHE = 'control-horas-mundo-natura-v4-1-2';
 const ASSETS = ['./', './index.html', './styles.css', './vacation.css', './app.js', './manifest.webmanifest', './assets/mundo-natura-logo.png', './icons/icon-192.png', './icons/icon-512.png'];
 const NETWORK_FIRST = ['document', 'script', 'style', 'manifest'];
 
@@ -8,10 +8,6 @@ self.addEventListener('install', event => {
 
 self.addEventListener('activate', event => {
   event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key !== CACHE && key.startsWith('control-horas-mundo-natura-')).map(key => caches.delete(key)))).then(() => self.clients.claim()));
-});
-
-self.addEventListener('message', event => {
-  if (event.data && event.data.type === 'SKIP_WAITING') self.skipWaiting();
 });
 
 self.addEventListener('fetch', event => {
